@@ -3,8 +3,6 @@ import { Profile } from 'state/types'
 import { GetUserProfileResponse } from 'utils/types'
 import { getProfileContract } from 'utils/contractHelpers'
 import { getTeam } from 'state/teams/helpers'
-import { NftToken } from 'state/nftMarket/types'
-import { getNftApi } from 'state/nftMarket/helpers'
 
 export interface GetProfileResponse {
   hasRegistered: boolean
