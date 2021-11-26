@@ -99,7 +99,6 @@ export interface Profile {
   isActive: boolean
   username: string
   team: Team
-  hasRegistered: boolean
 }
 
 // Slices states

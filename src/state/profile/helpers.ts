@@ -55,25 +55,7 @@ export const getProfileAvatar = async (address: string) => {
     const profileResponse = await profileContract.getUserProfile(address)
     const { tokenId, collectionAddress, isActive } = transformProfileResponse(profileResponse)
 
-    let nft = null
-    if (isActive) {
-      const apiRes = await getNftApi(collectionAddress, tokenId.toString())
-
-      nft = {
-        tokenId: apiRes.tokenId,
-        name: apiRes.name,
-        collectionName: apiRes.collection.name,
-        collectionAddress,
-        description: apiRes.description,
-        attributes: apiRes.attributes,
-        createdAt: apiRes.createdAt,
-        updatedAt: apiRes.updatedAt,
-        image: {
-          original: apiRes.image?.original,
-          thumbnail: apiRes.image?.thumbnail,
-        },
-      }
-    }
+    const nft = null
 
     return { nft, hasRegistered }
   } catch {
@@ -93,38 +75,6 @@ export const getProfile = async (address: string): Promise<GetProfileResponse> =
     const { userId, points, teamId, tokenId, collectionAddress, isActive } = transformProfileResponse(profileResponse)
     const team = await getTeam(teamId)
     const username = await getUsername(address)
-    let nftToken: NftToken
-
-    // If the profile is not active the tokenId returns 0, which is still a valid token id
-    // so only fetch the nft data if active
-    if (isActive) {
-      const apiRes = await getNftApi(collectionAddress, tokenId.toString())
-
-      nftToken = {
-        tokenId: apiRes.tokenId,
-        name: apiRes.name,
-        collectionName: apiRes.collection.name,
-        collectionAddress,
-        description: apiRes.description,
-        attributes: apiRes.attributes,
-        createdAt: apiRes.createdAt,
-        updatedAt: apiRes.updatedAt,
-        image: {
-          original: apiRes.image?.original,
-          thumbnail: apiRes.image?.thumbnail,
-        },
-      }
-
-      // Save the preview image in a cookie so it can be used on the exchange
-      Cookies.set(
-        `profile_${address}`,
-        {
-          username,
-          avatar: `${nftToken.image.thumbnail}`,
-        },
-        { domain: 'pancakeswap.finance', secure: true, expires: 30 },
-      )
-    }
 
     const profile = {
       userId,
@@ -134,7 +84,6 @@ export const getProfile = async (address: string): Promise<GetProfileResponse> =
       username,
       collectionAddress,
       isActive,
-      nft: nftToken,
       team,
     } as Profile
 

@@ -90,7 +90,7 @@ export const useProfile = () => {
 
 export const useGetProfileAvatar = (account: string) => {
   const profileAvatar = useSelector((state: State) => state.profile.profileAvatars[account])
-  const { username, nft, hasRegistered, usernameFetchStatus, avatarFetchStatus } = profileAvatar || {}
+  const { username, hasRegistered, usernameFetchStatus, avatarFetchStatus } = profileAvatar || {}
   const dispatch = useAppDispatch()
 
   useEffect(() => {
@@ -104,7 +104,7 @@ export const useGetProfileAvatar = (account: string) => {
     ) {
       dispatch(fetchProfileUsername({ account, hasRegistered }))
     }
-  }, [account, nft, username, hasRegistered, avatarFetchStatus, usernameFetchStatus, dispatch])
+  }, [account, username, hasRegistered, avatarFetchStatus, usernameFetchStatus, dispatch])
 
-  return { username, nft, usernameFetchStatus, avatarFetchStatus }
+  return { username, usernameFetchStatus, avatarFetchStatus }
 }

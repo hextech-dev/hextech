@@ -68,7 +68,6 @@ export const profileSlice = createSlice({
         state.profileAvatars[account] = {
           hasRegistered: false,
           username: null,
-          nft: null,
           // I think in theory this else should never be reached since we only check for username after we checked for profile/avatar
           // just in case I set isFetchingAvatar will be ProfileAvatarFetchStatus.FETCHED at this point to avoid refetching
           usernameFetchStatus: ProfileAvatarFetchStatus.FETCHING,
@@ -88,7 +87,6 @@ export const profileSlice = createSlice({
       } else {
         state.profileAvatars[account] = {
           username,
-          nft: null,
           hasRegistered: true,
           usernameFetchStatus: ProfileAvatarFetchStatus.FETCHED,
           // I think in theory this else should never be reached since we only check for username after we checked for profile/avatar
@@ -109,7 +107,6 @@ export const profileSlice = createSlice({
         state.profileAvatars[account] = {
           hasRegistered: false,
           username: '',
-          nft: null,
           usernameFetchStatus: ProfileAvatarFetchStatus.FETCHED,
           avatarFetchStatus: ProfileAvatarFetchStatus.FETCHED,
         }
