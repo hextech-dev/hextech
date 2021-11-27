@@ -1,4 +1,4 @@
-import { MenuItemsType, DropdownMenuItemType } from '@pancakeswap/uikit'
+import { MenuItemsType, DropdownMenuItemType } from '@hextech/uikit'
 import { ContextApi } from 'contexts/Localization/types'
 
 export type ConfigMenuItemsType = MenuItemsType & { hideSubNav?: boolean }
@@ -27,10 +27,6 @@ const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
         href: '/info',
       },
       {
-        label: t('IFO'),
-        href: '/ifo',
-      },
-      {
         label: t('Voting'),
         href: '/voting',
       },
@@ -38,16 +34,7 @@ const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
         type: DropdownMenuItemType.DIVIDER,
       },
       {
-        label: t('Leaderboard'),
-        href: '/teams',
-      },
-      {
         type: DropdownMenuItemType.DIVIDER,
-      },
-      {
-        label: t('Blog'),
-        href: 'https://medium.com/pancakeswap',
-        type: DropdownMenuItemType.EXTERNAL_LINK,
       },
       {
         label: t('Docs'),

@@ -1,4 +1,4 @@
-import { Language } from '@pancakeswap/uikit'
+import { Language } from '@hextech/uikit'
 
 export const AR: Language = { locale: 'ar-SA', language: 'العربية', code: 'ar' }
 export const BN: Language = { locale: 'bn-BD', language: 'বাংলা', code: 'bn' }
@@ -30,34 +30,34 @@ export const ZHCN: Language = { locale: 'zh-CN', language: '简体中文', code:
 export const ZHTW: Language = { locale: 'zh-TW', language: '繁體中文', code: 'zh-tw' }
 
 export const languages = {
-  'ar-SA': AR,
-  'bn-BD': BN,
+  // 'ar-SA': AR,
+  // 'bn-BD': BN,
   'en-US': EN,
-  'de-DE': DE,
-  'el-GR': EL,
-  'es-ES': ESES,
-  'fi-FI': FI,
-  'fil-PH': FIL,
-  'fr-FR': FR,
-  'hi-IN': HI,
-  'hu-HU': HU,
-  'id-ID': ID,
-  'it-IT': IT,
-  'ja-JP': JA,
-  'ko-KR': KO,
-  'nl-NL': NL,
-  'pl-PL': PL,
-  'pt-BR': PTBR,
-  'pt-PT': PTPT,
-  'ro-RO': RO,
-  'ru-RU': RU,
-  'sv-SE': SVSE,
-  'ta-IN': TA,
-  'tr-TR': TR,
-  'uk-UA': UK,
-  'vi-VN': VI,
-  'zh-CN': ZHCN,
-  'zh-TW': ZHTW,
+  // 'de-DE': DE,
+  // 'el-GR': EL,
+  // 'es-ES': ESES,
+  // 'fi-FI': FI,
+  // 'fil-PH': FIL,
+  // 'fr-FR': FR,
+  // 'hi-IN': HI,
+  // 'hu-HU': HU,
+  // 'id-ID': ID,
+  // 'it-IT': IT,
+  // 'ja-JP': JA,
+  // 'ko-KR': KO,
+  // 'nl-NL': NL,
+  // 'pl-PL': PL,
+  // 'pt-BR': PTBR,
+  // 'pt-PT': PTPT,
+  // 'ro-RO': RO,
+  // 'ru-RU': RU,
+  // 'sv-SE': SVSE,
+  // 'ta-IN': TA,
+  // 'tr-TR': TR,
+  // 'uk-UA': UK,
+  // 'vi-VN': VI,
+  // 'zh-CN': ZHCN,
+  // 'zh-TW': ZHTW,
 }
 
 export const languageList = Object.values(languages)
