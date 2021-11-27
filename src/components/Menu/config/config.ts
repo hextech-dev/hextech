@@ -9,36 +9,29 @@ const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
     icon: 'Swap',
     href: '/swap',
     showItemsOnMobile: false,
-    items: [
-      {
-        label: t('Exchange'),
-        href: '/swap',
-      }
-    ],
+    items: [],
+  },
+  {
+    label: t('Info'),
+    href: '/info',
+    showItemsOnMobile: false,
+    items: [],
+  },
+  {
+    label: t('Voting'),
+    href: '/voting',
+    showItemsOnMobile: false,
+    items: [],
   },
   {
     label: '',
-    href: '/info',
+    href: '/',
     icon: 'More',
     hideSubNav: true,
     items: [
       {
-        label: t('Info'),
-        href: '/info',
-      },
-      {
-        label: t('Voting'),
-        href: '/voting',
-      },
-      {
-        type: DropdownMenuItemType.DIVIDER,
-      },
-      {
-        type: DropdownMenuItemType.DIVIDER,
-      },
-      {
         label: t('Docs'),
-        href: 'https://docs.pancakeswap.finance',
+        href: 'https://hextech.gitbook.io/documentation/',
         type: DropdownMenuItemType.EXTERNAL_LINK,
       },
     ],
