@@ -1,3 +1,6 @@
 tasks:
   - init: yarn install && yarn run build
     command: yarn run start
+
+workspaceLocation: hextech/workspace.code-workspace
+checkoutLocation: .

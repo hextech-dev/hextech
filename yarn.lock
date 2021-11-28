@@ -2293,10 +2293,10 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
-"@hextech/uikit@0.59.3":
-  version "0.59.3"
-  resolved "https://registry.yarnpkg.com/@hextech/uikit/-/uikit-0.59.3.tgz#e0a172e3bdbb7eb3625d01cc92182de6653ce697"
-  integrity sha512-+BRROVD4ZMLlIrD8MLaRRKAWu1Qr0rMP7jncF3l5OvwaXv0FkNIiI6suyzvMGbW3qzBB/lk4MP2JgfCiLcJTSg==
+"@hextech/uikit@0.59.6":
+  version "0.59.6"
+  resolved "https://registry.yarnpkg.com/@hextech/uikit/-/uikit-0.59.6.tgz#a67907e1b287d026f8cb1612929456275c5b9a7a"
+  integrity sha512-lzeme+zDf6p0l45db9uzLeInavhenh8FrsXCUhk63hyDlHzK2slcZZTTUuM1PldwQcs54ECW+/HqcgA/EfIbNg==
   dependencies:
     "@popperjs/core" "^2.9.2"
     "@types/lodash" "^4.14.168"

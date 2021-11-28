@@ -42,7 +42,6 @@ const App: React.FC = () => {
   const { account } = useWeb3React()
 
   usePollBlockNumber()
-  useEagerConnect()
   useFetchProfile()
   usePollCoreFarmData()
   useScrollOnRouteChange()
